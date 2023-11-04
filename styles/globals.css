@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+    font-family: 'Roboto Slab', serif;
+}
+
+.custom-img{
+    background-image: url(https://static.dezeen.com/uploads/2019/03/notre-norman-kelley-interior-chicago-us_dezeen_2364_col_26.jpg);
+  }
