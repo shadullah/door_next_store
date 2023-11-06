@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="bg-blue-800 text-white flex justify-between px-24">
+    <div className="bg-gradient-to-r from-pink-400 via-red-400 to-orange-500">
+      <div className="  text-white flex justify-between px-24">
         <div className="py-24">
           <h1 className="font-bold text-2xl md:text-4xl text-white">
             Door Next Store
@@ -128,7 +128,7 @@ const Footer = () => {
       </div>
       <p className="text-center text-sm md:text-xl font-medium py-10">
         All &copy; Copyright Reserved by{" "}
-        <span className="font-extrabold text-orange-400 text-sm md:text-2xl">
+        <span className="font-extrabold text-red-800 text-sm md:text-2xl">
           Door Next Store
         </span>
       </p>
