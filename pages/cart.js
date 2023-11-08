@@ -20,10 +20,18 @@ const Cart = () => {
 
   return (
     <Layout>
-      <div className="max-w-[1240px] m-auto md:p-6">
+      <div className="">
         {/* hero content */}
-        <div className="absolute top-0 left-0 right-0 bottom-[490px] md:bottom-[625px] bg-black z-[2]"></div>
-        <div className="mt-24 text-left text-xl md:text-5xl font-bold text-black my-5">
+        <div className="custom-img h-80 flex items-center justify-center">
+          <div className="absolute top-0 left-0 right-0 bottom-60 md:bottom-96 bg-black/40 z-[2]"></div>
+          <div className=" text-white z-[2]">
+            <h1 className="text-2xl md:text-4xl font-bold my-16 text-white text-center">
+              Cart
+              <div className=" border-red-400 border-2 w-24 mt-5 mx-auto"></div>
+            </h1>
+          </div>
+        </div>
+        <div className="max-w-[1240px] m-auto md:p-6 mt-24 text-left text-xl md:text-5xl font-bold text-black my-5">
           <h1>Shopping Cart</h1>
           <div className="flex my-10 text-xs md:text-xl font-light">
             <div>

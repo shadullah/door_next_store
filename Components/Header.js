@@ -64,10 +64,10 @@ const Header = () => {
                 </Link>
               </li>
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
-                <Link href="/work">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
               <li className="p-4 bg-red-400 hover:bg-red-500 rounded-md hover:text-white bg-gradient-to-r from-red-400 to-orange-500 hover:from-red-500 hover:to-red-800">
-                <Link href="/contact">Login</Link>
+                <Link href="/login">Login</Link>
               </li>
             </ul>
           </div>

@@ -1,4 +1,3 @@
-import Contact from "@/Components/Contact";
 import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import "@/styles/globals.css";
@@ -11,7 +10,6 @@ export default function App({ Component, pageProps }) {
         <Header />
         <Component {...pageProps} />
       </StoreProvider>
-      <Contact />
       <Footer />
     </>
   );
