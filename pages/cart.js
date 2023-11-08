@@ -18,6 +18,11 @@ const Cart = () => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };
 
+  const updateCartHandler = (item, qty) => {
+    const quantity = Number(qty);
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...item, quantity } });
+  };
+
   return (
     <Layout>
       <div className="">
@@ -33,7 +38,7 @@ const Cart = () => {
         </div>
         <div className="max-w-[1240px] m-auto md:p-6 mt-24 text-left text-xl md:text-5xl font-bold text-black my-5">
           <h1>Shopping Cart</h1>
-          <div className="flex my-10 text-xs md:text-xl font-light">
+          <div className=" flex my-10 text-xs md:text-xl font-light">
             <div>
               <Link href="/">Home</Link> /{" "}
             </div>
@@ -51,7 +56,7 @@ const Cart = () => {
         </div>
 
         {/* border part */}
-        <div className="md:w-full h-0.5 bg-slate-200 border mb-12"></div>
+        <div className="md:w-[1200px] h-0.5 bg-slate-200 border mb-12 mx-auto"></div>
 
         {/* table */}
         {cartItems.length === 0 ? (
@@ -62,7 +67,7 @@ const Cart = () => {
             </Link>
           </div>
         ) : (
-          <div className="grid md:grid-cols-4 md:gap-5">
+          <div className="max-w-[1240px] m-auto md:p-6 grid md:grid-cols-4 md:gap-5">
             <div className="block md:overflow-x-auto md:col-span-3">
               <table className=" md:min-w-full ">
                 <thead className="border-b">
@@ -91,7 +96,20 @@ const Cart = () => {
                           {item.name}
                         </Link>
                       </td>
-                      <td className="p-5 text-right">{item.quantity}</td>
+                      <td className="p-5 text-right">
+                        <select
+                          value={item.quantity}
+                          onChange={(e) =>
+                            updateCartHandler(item, e.target.value)
+                          }
+                        >
+                          {[...Array(item.countInStock).keys()].map((x) => (
+                            <option key={x + 1} value={x + 1}>
+                              {x + 1}
+                            </option>
+                          ))}
+                        </select>
+                      </td>
                       <td className="p-5 text-right">${item.price}</td>
                       <td className="p-5 text-center">
                         <button onClick={() => removeItem(item)}>
