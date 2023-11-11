@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
+import dynamic from "next/dynamic";
 
 const Cart = () => {
-  const { state, dispatch } = useContext(Store);
-
   const router = useRouter();
+  const { state, dispatch } = useContext(Store);
 
   const {
     cart: { cartItems },
@@ -163,4 +163,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default dynamic(() => Promise.resolve(Cart), { ssr: false });

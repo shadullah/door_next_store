@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
-import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import React, { useState } from "react";
 
 const Layout = ({ title, children }) => {
   return (

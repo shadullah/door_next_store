@@ -1,10 +1,12 @@
 import { Store } from "@/Utils/Store";
 import Link from "next/link";
+import { userAgent } from "next/server";
 import React, { useContext, useEffect, useState } from "react";
 
 const Header = () => {
   const { state } = useContext(Store);
   const { cart } = state;
+  const [cartItemsCnt, setCartItemsCnt] = useState(0);
 
   const [nav, setNav] = useState(false);
   const [clr, setClr] = useState("transparent");
@@ -13,6 +15,10 @@ const Header = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    setCartItemsCnt(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
+  }, [cart.cartItems]);
 
   useEffect(() => {
     const changeClr = () => {
@@ -56,9 +62,9 @@ const Header = () => {
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="/cart">
                   Cart
-                  {cart.cartItems.length > 0 && (
+                  {cartItemsCnt > 0 && (
                     <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      {cartItemsCnt}
                     </span>
                   )}
                 </Link>
