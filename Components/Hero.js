@@ -7,7 +7,7 @@ const Hero = ({ headings, message }) => {
       <div className="p-5 text-white z-[2] mt-[10rem] ">
         <h1 className="text-2xl md:text-5xl font-bold">{headings}</h1>
         <p className="py-5 text-xs md:text-xl">{message}</p>
-        <Link href="/contact">
+        <Link href="/collections">
           <button className="px-8 py-2 bg-red-400 hover:bg-red-500 rounded-md">
             Shop NoW
           </button>
