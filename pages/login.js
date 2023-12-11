@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "@/styles/Login.module.css";
 
 const login = () => {
   return (
@@ -13,8 +14,47 @@ const login = () => {
           </h1>
         </div>
       </div>
+      <div className="">
+        <div class="background">
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+        <form id="form">
+          <h3>Login Here</h3>
+
+          <label id="label" for="username">
+            Username
+          </label>
+          <input
+            className="input"
+            type="text"
+            placeholder="Email or Phone"
+            id="username"
+          />
+
+          <label id="label" for="password">
+            Password
+          </label>
+          <input
+            className="input"
+            type="password"
+            placeholder="Password"
+            id="password"
+          />
+
+          <button id="btn">Log In</button>
+          <div class="social">
+            <div class="go">
+              <i class="fab fa-google"></i> Google
+            </div>
+            <div class="fb">
+              <i class="fab fa-facebook"></i> Facebook
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
-//
+
 export default login;
