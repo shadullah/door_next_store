@@ -149,7 +149,7 @@ const Cart = () => {
               </p>
               <div className="text-center">
                 <button
-                  onClick={() => router.push("/shipping")}
+                  onClick={() => router.push("login?redirect=/shipping")}
                   className="px-24  py-2 bg-black hover:bg-green-400 rounded-full text-white"
                 >
                   Checkout
