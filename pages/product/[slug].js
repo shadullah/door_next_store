@@ -62,7 +62,7 @@ const ProductScreen = () => {
       </div>
 
       {/* Product Details */}
-      <div className="mx-auto max-w-[1200px] shadow-2xl p-4 mt-16 rounded-2xl">
+      <div className="mx-auto max-w-[1200px] shadow-2xl p-4 my-16 rounded-2xl">
         <div className="block md:flex items-center justify-between">
           <div className="md:w-1/3">
             <Image
